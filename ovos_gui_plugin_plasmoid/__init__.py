@@ -14,7 +14,8 @@ class PlasmoidExtension(GUIExtension):
         permanent (bool): disable unloading of GUI skills on gui client disconnections
     """
 
-    def __init__(self, bus, gui, config, preload_gui=False, permanent=True):
+    def __init__(self, config, bus=None, gui=None,
+                 preload_gui=False, permanent=True):
         # only thing this is really doing is changing default value of "permanent" flag
         LOG.info("Plasmoid: Initializing")
         super().__init__(bus, gui, config, preload_gui, permanent)
